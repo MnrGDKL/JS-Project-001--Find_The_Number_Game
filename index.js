@@ -52,7 +52,7 @@ quessBtn.addEventListener("click", ()=>{
             else{
                 quessResult.innerText = `YOU WIN!`;
                 congrats.style.visibility = "visible";
-                attemptNumber.textContent = count + " left";
+                succes();
             }
         }
         
@@ -66,14 +66,27 @@ quessBtn.addEventListener("click", ()=>{
     else{
         quessResult.innerText = `YOU LOSE \n \n Would You like To Play Again?`;
         // alert("You have no more chance to continue.");
-        Swal.fire(
-            'YOU LOSE!',
-            'Try Again',
-            'error'
-          )
-    }
+        lose();
+    };
 });
+
 
 newGame.addEventListener("click", ()=>{
     window.location.reload();
-})
+});
+
+let succes = ()=>{
+    Swal.fire(
+        'Congrats',
+        'You Win',
+        'success'
+      );
+}
+
+let lose = ()=>{
+    Swal.fire(
+        'YOU LOSE!',
+        'Try Again',
+        'error'
+      )
+};
