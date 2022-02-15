@@ -32,7 +32,7 @@ quessBtn.addEventListener("click", ()=>{
                                            : (difference <10) ? `Low!\nGo Up`
                                            : `Too Low!\nGo Up`;
 
-                    prevAttempts.innerText = `Your Previous Quesses: \n${quessNums.join(" - ")}`;
+                    prevAttempts.innerText = `Your Previous Guesses: \n${quessNums.join(" - ")}`;
                     attemptNumber.textContent = count + " left";
                     inputNumber.value = "";
                     inputNumber.focus();
