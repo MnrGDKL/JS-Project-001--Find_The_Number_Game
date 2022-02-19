@@ -1,5 +1,5 @@
 const inputNumber   = document.querySelector("#input-number");
-const quessBtn      = document.querySelector(".quess-btn");
+const guessBtn      = document.querySelector(".quess-btn");
 const quessResult   = document.querySelector(".quess-result");
 const attemptNumber = document.querySelector(".attempt-left");
 const prevAttempts  = document.querySelector(".prev-attempts")
@@ -16,7 +16,15 @@ let userNum = 0;
 let quessNums = [];
 let difference = 0;
 
-quessBtn.addEventListener("click", ()=>{
+guessBtn.addEventListener("click",guessNumber);
+inputNumber.addEventListener("keyup", (e)=>{
+    if (e.keyCode === 13){
+        e.preventDefault();
+        guessBtn.click();
+    }
+})
+
+function guessNumber(){
     count--;
     userNum = +inputNumber.value;
     difference = Math.abs(myNumber-userNum);
@@ -68,7 +76,7 @@ quessBtn.addEventListener("click", ()=>{
         // alert("You have no more chance to continue.");
         lose();
     };
-});
+}
 
 
 newGame.addEventListener("click", ()=>{

@@ -25,15 +25,7 @@ body{
     min-height: 650px;
     border-radius: 1rem;
 }
-
-.input-container{
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.input-container h2{
+.main-container h2{
 
     border-radius: .5rem;
     background-color: red;
@@ -41,12 +33,20 @@ body{
     padding: .5rem 2rem;
     text-shadow: 2px 2px 10px black;
 }
+
+.input-container{
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 #input-number{
-    width: 4rem;
+    width: 6rem;
     height: 2.5rem;
     font-size: 1rem;
     text-align: center;
     font-weight: bolder;
+    border-radius: 4rem 0 0 4rem;
 }
 
 .quess-btn{
@@ -54,7 +54,10 @@ body{
     background-color: blue;
     font-size: large;
     border-radius: 5px;
-    height: 2rem;
+    height: 2.5rem;
+    border-radius: 0 4rem 4rem 0;
+    width: 6rem;
+
     
 }
 
